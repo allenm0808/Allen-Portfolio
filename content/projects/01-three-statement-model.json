@@ -1,6 +1,6 @@
 {
   "title": "Three Statement Forecasting Model",
-  "homepage_label": "Three statement forecasting model",
+  "homepage_label": "Three Statement Forecasting Model",
   "subtitle": "Ralph Lauren Corporation",
   "published": true,
   "order": 1,
@@ -18,7 +18,5 @@
       "title": "What I Learned",
       "body": "Write a few sentences about what the project taught you about financial statements, forecasting, and business drivers."
     }
-  ],
-  "gallery": [],
-  "external_link": ""
+  ]
 }
