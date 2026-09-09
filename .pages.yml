@@ -4,7 +4,7 @@ media:
 
 content:
   - name: site
-    label: Site settings
+    label: Site Settings
     type: file
     path: content/site.json
     format: json
@@ -12,27 +12,28 @@ content:
       delete: false
     fields:
       - name: title
-        label: Portfolio title
+        label: Portfolio Title
         type: string
         required: true
       - name: linkedin_url
         label: LinkedIn URL
         type: string
+        description: "Paste your full LinkedIn profile URL."
       - name: email
-        label: Email address
+        label: Email Address
         type: string
       - name: background
-        label: Background color
+        label: Background Color
         type: string
         description: "Hex color, e.g. #ffffff"
       - name: text_color
-        label: Text color
+        label: Text Color
         type: string
         description: "Hex color, e.g. #000000"
       - name: highlight_color
-        label: Link hover color
+        label: Link Hover Color
         type: string
-        description: "Plain Jane-style hover highlight."
+        description: "Plain Jane default is #FE0100."
 
   - name: projects
     label: Projects
@@ -40,7 +41,7 @@ content:
     path: content/projects
     format: json
     filename:
-      template: "{order}-{title}.json"
+      template: "{title}.json"
       field: false
     operations:
       create: true
@@ -55,31 +56,30 @@ content:
         order: asc
     fields:
       - name: title
-        label: Project page title
+        label: Project Title
         type: string
         required: true
       - name: homepage_label
-        label: Homepage link text
+        label: Homepage Link Text
         type: string
-        required: true
-        description: "The short line shown in the center of the homepage."
+        description: "Optional. Leave blank to use the Project Title automatically."
       - name: subtitle
         label: Subtitle
         type: string
       - name: published
-        label: Show on site
+        label: Show On Site
         type: boolean
         default: true
       - name: order
-        label: Homepage order
+        label: Homepage Order
         type: number
         required: true
         description: "1 appears first, 2 second, etc."
       - name: summary
-        label: Short introduction
+        label: Short Introduction
         type: text
       - name: sections
-        label: Page sections
+        label: Page Sections
         type: object
         list:
           collapsible:
@@ -87,10 +87,10 @@ content:
             summary: "{title}"
         fields:
           - name: title
-            label: Section heading
+            label: Section Heading
             type: string
           - name: body
-            label: Section text
+            label: Section Text
             type: text
       - name: gallery
         label: Images
@@ -104,9 +104,13 @@ content:
             label: Image
             type: image
           - name: alt
-            label: Image description
+            label: Image Description
             type: string
       - name: external_link
-        label: Project/file link
+        label: Project/File Link
         type: string
         description: "Optional link to a spreadsheet, PDF, Drive file, etc."
+      - name: external_link_label
+        label: Project/File Button Text
+        type: string
+        description: "Example: View Model or View Analysis."

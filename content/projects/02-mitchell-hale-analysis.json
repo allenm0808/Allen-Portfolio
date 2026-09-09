@@ -1,7 +1,7 @@
 {
   "title": "Mitchell & Hale Analysis",
   "homepage_label": "Mitchell & Hale Analysis",
-  "subtitle": "Small-business data analysis",
+  "subtitle": "Small-Business Data Analysis",
   "published": true,
   "order": 2,
   "summary": "An Excel-based analysis of internal office data designed to make revenue, fee, referral, and operating trends easier to understand.",
@@ -18,5 +18,8 @@
       "title": "Takeaways",
       "body": "Add the most useful findings or recommendations from the project."
     }
-  ]
+  ],
+  "gallery": [],
+  "external_link": "",
+  "external_link_label": "View Project File"
 }
