@@ -1,0 +1,7 @@
+{
+  "name": "allen-portfolio",
+  "private": true,
+  "scripts": {
+    "build": "node build.js"
+  }
+}
