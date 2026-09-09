@@ -1,6 +1,6 @@
 {
   "title": "IPREME Soap Business",
-  "homepage_label": "IPREME soap business",
+  "homepage_label": "IPREME Soap Business",
   "subtitle": "San Cristóbal, Dominican Republic",
   "published": true,
   "order": 3,
@@ -18,7 +18,5 @@
       "title": "What Continued",
       "body": "Describe what happened after you left and what you learned from seeing other people continue the work."
     }
-  ],
-  "gallery": [],
-  "external_link": ""
+  ]
 }
