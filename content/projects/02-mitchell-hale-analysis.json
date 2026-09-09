@@ -1,6 +1,6 @@
 {
   "title": "Mitchell & Hale Analysis",
-  "homepage_label": "Mitchell & Hale analysis",
+  "homepage_label": "Mitchell & Hale Analysis",
   "subtitle": "Small-business data analysis",
   "published": true,
   "order": 2,
@@ -18,7 +18,5 @@
       "title": "Takeaways",
       "body": "Add the most useful findings or recommendations from the project."
     }
-  ],
-  "gallery": [],
-  "external_link": ""
+  ]
 }
