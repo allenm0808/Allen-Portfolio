@@ -1,0 +1,25 @@
+{
+  "title": "Mitchell & Hale Analysis",
+  "homepage_label": "Mitchell & Hale Analysis",
+  "subtitle": "Small-Business Data Analysis",
+  "published": true,
+  "order": 2,
+  "summary": "An Excel-based analysis of internal office data designed to make revenue, fee, referral, and operating trends easier to understand.",
+  "sections": [
+    {
+      "title": "Overview",
+      "body": "Replace this with the problem you noticed in the office data and why you decided to analyze it."
+    },
+    {
+      "title": "Analysis",
+      "body": "Describe how you cleaned and consolidated the data, what metrics you calculated, and what questions you tried to answer."
+    },
+    {
+      "title": "Takeaways",
+      "body": "Add the most useful findings or recommendations from the project."
+    }
+  ],
+  "gallery": [],
+  "external_link": "",
+  "external_link_label": "View Project File"
+}

@@ -1,0 +1,135 @@
+media:
+  input: static/media
+  output: /media
+
+content:
+  - name: site
+    label: Site Settings
+    type: file
+    path: content/site.json
+    format: json
+    operations:
+      delete: false
+    fields:
+      - name: title
+        label: Browser / Site Title
+        type: string
+        required: true
+        description: "Used in the browser tab and page metadata."
+      - name: wordmark
+        label: Nameplate Text
+        type: string
+        required: true
+        description: "Large serif text inside the white nameplate. Default: Allen Mitchell"
+      - name: portfolio_header
+        label: Header Under Nameplate
+        type: string
+        required: true
+        description: "Small typewriter-style line below the nameplate. Default: Finance Portfolio"
+      - name: linkedin_url
+        label: LinkedIn URL
+        type: string
+        description: "Paste your full LinkedIn profile URL."
+      - name: email
+        label: Email Address
+        type: string
+      - name: home_background
+        label: Homepage Background
+        type: string
+        description: "Default: #000000"
+      - name: home_text_color
+        label: Homepage Text
+        type: string
+        description: "Default: #ffffff"
+      - name: page_background
+        label: Project Page Background
+        type: string
+        description: "Default: #ffffff"
+      - name: page_text_color
+        label: Project Page Text
+        type: string
+        description: "Default: #000000"
+      - name: accent_color
+        label: Highlight Color
+        type: string
+        description: "Default: #FE0100"
+
+  - name: projects
+    label: Projects
+    type: collection
+    path: content/projects
+    format: json
+    filename:
+      template: "{title}.json"
+      field: false
+    operations:
+      create: true
+      rename: true
+      delete: true
+    view:
+      fields: [title, published, order]
+      primary: title
+      sort: [order, title]
+      default:
+        sort: order
+        order: asc
+    fields:
+      - name: title
+        label: Project Title
+        type: string
+        required: true
+      - name: homepage_label
+        label: Homepage Link Text
+        type: string
+        description: "Optional. Leave blank to use the Project Title automatically."
+      - name: subtitle
+        label: Subtitle
+        type: string
+      - name: published
+        label: Show On Site
+        type: boolean
+        default: true
+      - name: order
+        label: Homepage Order
+        type: number
+        required: true
+        description: "1 appears first, 2 second, etc."
+      - name: summary
+        label: Short Introduction
+        type: text
+      - name: sections
+        label: Page Sections
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{title}"
+        fields:
+          - name: title
+            label: Section Heading
+            type: string
+          - name: body
+            label: Section Text
+            type: text
+      - name: gallery
+        label: Images
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{alt}"
+        fields:
+          - name: image
+            label: Image
+            type: image
+          - name: alt
+            label: Image Description
+            type: string
+      - name: external_link
+        label: Project/File Link
+        type: string
+        description: "Optional link to a spreadsheet, PDF, Drive file, etc."
+      - name: external_link_label
+        label: Project/File Link Text
+        type: string
+        description: "Example: View Model or View Analysis."
