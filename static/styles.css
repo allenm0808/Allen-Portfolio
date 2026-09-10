@@ -1,0 +1,373 @@
+:root {
+  --home-bg: #000000;
+  --home-text: #ffffff;
+  --page-bg: #ffffff;
+  --page-text: #000000;
+  --accent: #FE0100;
+  --mono: "Courier New", Courier, "Nimbus Mono PS", monospace;
+  --sans: Arial, Helvetica, sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+html, body { min-height: 100%; }
+
+body {
+  margin: 0;
+  font-family: var(--mono);
+  font-size: 14px;
+  -webkit-font-smoothing: none;
+  text-rendering: geometricPrecision;
+}
+
+a { color: inherit; }
+
+::selection {
+  color: #fff;
+  background: var(--accent);
+}
+
+/* ------------------------------
+   SHARED BRAND / NAMEPLATE
+   White editorial nameplate with black serif lettering.
+------------------------------- */
+
+.brand-lockup {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.brand-mark {
+  display: grid;
+  place-items: center;
+  width: max-content;
+  max-width: 92vw;
+  min-height: 68px;
+  padding: 10px 28px 8px;
+  color: #000;
+  background: #fff;
+  border: 2px solid #fff;
+  text-decoration: none;
+}
+
+.brand-text {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: clamp(30px, 2.7vw, 42px);
+  line-height: .95;
+  font-weight: 700;
+  letter-spacing: .07em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.brand-title {
+  margin-top: 17px;
+  font-family: var(--mono);
+  font-size: 15px;
+  line-height: 1.1;
+  font-weight: 400;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.project-theme .brand-mark {
+  border-color: #000;
+}
+
+/* ------------------------------
+   HOME
+------------------------------- */
+
+.home-theme {
+  background: var(--home-bg);
+  color: var(--home-text);
+}
+
+.portfolio-home {
+  position: relative;
+  min-height: 100svh;
+  padding: 0 24px;
+  overflow: hidden;
+}
+
+.home-brand {
+  position: absolute;
+  top: 8.5vh;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.project-menu {
+  position: absolute;
+  top: 37.5vh;
+  left: 50%;
+  width: min(94vw, 660px);
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.project-link {
+  display: inline-block;
+  width: fit-content;
+  margin: 0 0 23px;
+  padding: 1px 3px 0;
+  font-size: 15px;
+  line-height: 1.05;
+  font-weight: 400;
+  text-decoration: none;
+  text-align: center;
+}
+
+.project-link:hover,
+.project-link:focus-visible {
+  color: #fff;
+  background: var(--accent);
+  outline: none;
+}
+
+.home-footer {
+  position: absolute;
+  left: 50%;
+  bottom: 8.5vh;
+  transform: translateX(-50%);
+}
+
+.social-links,
+.project-social-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+}
+
+.social-link {
+  display: grid;
+  place-items: center;
+  width: 20px;
+  height: 20px;
+  color: #777;
+  text-decoration: none;
+}
+
+.home-theme .social-link { color: #777; }
+.project-theme .social-link { color: #888; }
+
+.social-link svg {
+  display: block;
+  width: 18px;
+  height: 18px;
+}
+
+.social-link:hover,
+.social-link:focus-visible {
+  color: var(--accent);
+  outline: none;
+}
+
+/* ------------------------------
+   PROJECT PAGES — compact editorial/typewriter layout
+------------------------------- */
+
+.project-theme {
+  background: var(--page-bg);
+  color: var(--page-text);
+}
+
+.project-page {
+  min-height: 100svh;
+  padding: 0 24px 54px;
+}
+
+.project-brand {
+  padding-top: 66px;
+}
+
+.project-brand .brand-mark {
+  width: clamp(255px, 27vw, 340px);
+  min-height: 55px;
+  padding: 8px 18px 6px;
+}
+
+.project-brand .brand-text {
+  font-size: clamp(27px, 2.5vw, 36px);
+}
+
+.project-brand .brand-title {
+  margin-top: 13px;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.project-content {
+  width: min(100%, 920px);
+  margin: 126px auto 0;
+}
+
+.project-header h1,
+.project-section h2 {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.08;
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.project-subtitle {
+  margin: 8px 0 0;
+  font-size: 14px;
+  line-height: 1.08;
+}
+
+.project-summary {
+  margin: 14px 0 0;
+  max-width: 900px;
+  white-space: pre-wrap;
+  font-size: 14px;
+  line-height: 1.1;
+}
+
+.project-section {
+  margin-top: 13px;
+}
+
+.project-section h2 {
+  margin-bottom: 6px;
+  text-decoration: none;
+}
+
+.project-section p {
+  margin: 0;
+  max-width: 900px;
+  white-space: pre-wrap;
+  font-size: 14px;
+  line-height: 1.1;
+}
+
+.project-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 28px;
+}
+
+.project-gallery figure {
+  margin: 0;
+  border: 1px solid rgba(0,0,0,.14);
+  background: #f4f4f4;
+}
+
+.project-gallery img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.project-external {
+  margin: 21px 0 0;
+}
+
+.text-highlight-link {
+  display: inline-block;
+  width: fit-content;
+  padding: 1px 3px 0;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.text-highlight-link:hover,
+.text-highlight-link:focus-visible {
+  color: #fff;
+  background: var(--accent);
+  text-decoration: none;
+  outline: none;
+}
+
+.project-footer {
+  width: min(100%, 920px);
+  margin: 74px auto 0;
+  padding-top: 18px;
+}
+
+.project-footer .project-social-links {
+  justify-content: flex-start;
+}
+
+@media (max-width: 720px) {
+  .brand-mark {
+    width: max-content;
+    max-width: 92vw;
+    min-height: 58px;
+    padding: 9px 16px 7px;
+  }
+
+  .brand-text {
+    font-size: clamp(24px, 7.1vw, 32px);
+    letter-spacing: .045em;
+  }
+
+  .brand-title {
+    margin-top: 14px;
+    font-size: 14px;
+    white-space: normal;
+  }
+
+  .project-brand .brand-mark {
+    width: min(82vw, 300px);
+    min-height: 50px;
+  }
+
+  .project-brand .brand-text {
+    font-size: clamp(24px, 7.2vw, 31px);
+  }
+
+  .home-brand { top: 8vh; }
+
+  .project-menu {
+    top: 34vh;
+    align-items: center;
+    text-align: center;
+  }
+
+  .project-link {
+    margin-bottom: 22px;
+    font-size: 14px;
+  }
+
+  .home-footer { bottom: 6vh; }
+
+  .project-page {
+    padding-inline: 20px;
+  }
+
+  .project-brand { padding-top: 38px; }
+
+  .project-content {
+    margin-top: 78px;
+  }
+
+  .project-header h1,
+  .project-section h2,
+  .project-subtitle,
+  .project-summary,
+  .project-section p {
+    font-size: 13px;
+    line-height: 1.2;
+  }
+
+  .project-gallery {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .project-footer {
+    margin-top: 52px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scroll-behavior: auto !important; }
+}

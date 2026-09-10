@@ -1,0 +1,25 @@
+{
+  "title": "Three Statement Forecasting Model",
+  "homepage_label": "Three Statement Forecasting Model",
+  "subtitle": "Ralph Lauren Corporation",
+  "published": true,
+  "order": 1,
+  "summary": "A three-statement forecasting model built to connect operating assumptions across the income statement, balance sheet, and cash flow statement.",
+  "sections": [
+    {
+      "title": "Overview",
+      "body": "Replace this with your description of the project, why you built it, and what the model does."
+    },
+    {
+      "title": "What I Did",
+      "body": "Explain the historical data work, assumptions, forecasts, and any valuation or analysis you added."
+    },
+    {
+      "title": "What I Learned",
+      "body": "Write a few sentences about what the project taught you about financial statements, forecasting, and business drivers."
+    }
+  ],
+  "gallery": [],
+  "external_link": "",
+  "external_link_label": "View Project File"
+}

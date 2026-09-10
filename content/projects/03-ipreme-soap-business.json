@@ -1,0 +1,25 @@
+{
+  "title": "IPREME Soap Business",
+  "homepage_label": "IPREME Soap Business",
+  "subtitle": "San Cristóbal, Dominican Republic",
+  "published": true,
+  "order": 3,
+  "summary": "A student-centered soap and cleaning-products venture designed to create hands-on business experience and income opportunities at IPREME.",
+  "sections": [
+    {
+      "title": "The Idea",
+      "body": "Describe the problem, the students you worked with, and why the business was created."
+    },
+    {
+      "title": "Building the Business",
+      "body": "Explain the products, pricing, manufacturing, sales, marketing, and how responsibilities were divided."
+    },
+    {
+      "title": "What Continued",
+      "body": "Describe what happened after you left and what you learned from seeing other people continue the work."
+    }
+  ],
+  "gallery": [],
+  "external_link": "",
+  "external_link_label": "View Project File"
+}
